@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Chatbot</title>
+</head>
+<body>
+    <h1>Financial Chatbot</h1>
+    <form method="POST">
+        <label for="company">Company (e.g., Apple, Tesla, Microsoft):</label><br>
+        <input type="text" name="company" required><br><br>
+
+        <label for="year">Year (e.g., 2021, 2022):</label><br>
+        <input type="number" name="year" required><br><br>
+
+        <label for="query">Question:</label><br>
+        <select name="query">
+            <option value="What is the total revenue?">What is the total revenue?</option>
+            <option value="How has net income changed over the last year?">How has net income changed over the last year?</option>
+            <option value="What is the total assets?">What is the total assets?</option>
+            <option value="What is the total liabilities?">What is the total liabilities?</option>
+            <option value="How has cash flow from operating activities changed over the last year?">How has cash flow from operating activities changed over the last year?</option>
+        </select><br><br>
+
+        <input type="submit" value="Ask">
+    </form>
+
+    {% if response %}
+        <h3>Response:</h3>
+        <p>{{ response }}</p>
+    {% endif %}
+</body>
+</html>
